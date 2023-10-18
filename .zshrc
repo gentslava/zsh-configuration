@@ -4,6 +4,10 @@ zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Brew init
+export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
+export PATH="$BREW_HOME:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -112,8 +116,7 @@ plugins=(
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,7 +146,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls='clear'
-alias up='sudo apt update && sudo apt upgrade -y && bun upgrade && omz update'
+alias up='sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && bun upgrade && omz update'
 
 # bun completions
 [ -s "/home/gentslava/.bun/_bun" ] && source "/home/gentslava/.bun/_bun"
