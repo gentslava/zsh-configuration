@@ -54,6 +54,7 @@ VSCODE=code
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
+  zsh-tab-title
 #  man
 #  nvm
   git
