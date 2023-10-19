@@ -68,7 +68,7 @@ plugins=(
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
