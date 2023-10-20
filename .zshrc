@@ -55,6 +55,7 @@ VSCODE=code
 
 plugins=(
   zsh-tab-title
+  history
 #  man
 #  nvm
   git
