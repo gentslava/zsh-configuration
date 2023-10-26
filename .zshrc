@@ -47,6 +47,11 @@ export NVM_SILENT=true
 # Invalid entries will be ignored, no aliases will be added
 VSCODE=code
 
+# By default, you-should-use will display its reminder message before a command has executed.
+# However, you can choose to display the mesasge after a command has executed by setting the
+# value of YSU_MESSAGE_POSITION.
+export YSU_MESSAGE_POSITION="after"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -54,18 +59,19 @@ VSCODE=code
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-  zsh-tab-title
-  history
 #  man
 #  nvm
-  git
 #  docker
+  zsh-tab-title
+  history
+  git
   sudo
   zsh-autosuggestions
   zsh-syntax-highlighting
   vscode
   zsh-nvm
   zsh-better-npm-completion
+  you-should-use
 )
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
@@ -153,3 +159,6 @@ export PATH="$BUN_HOME/bin:$PATH"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# bun completions
+[ -s "/home/gentslava/.bun/_bun" ] && source "/home/gentslava/.bun/_bun"
