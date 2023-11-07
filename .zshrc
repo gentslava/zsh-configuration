@@ -61,7 +61,7 @@ export YSU_MESSAGE_POSITION="after"
 plugins=(
 #  man
 #  nvm
-#  docker
+  docker
   zsh-tab-title
   history
   git
@@ -72,6 +72,7 @@ plugins=(
   zsh-nvm
   zsh-better-npm-completion
   you-should-use
+  autoupdate
 )
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
@@ -162,3 +163,4 @@ export PATH="$BUN_HOME/bin:$PATH"
 
 # bun completions
 [ -s "/home/gentslava/.bun/_bun" ] && source "/home/gentslava/.bun/_bun"
+export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
