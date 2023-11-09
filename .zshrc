@@ -71,7 +71,7 @@ plugins=(
   vscode
   zsh-nvm
   zsh-better-npm-completion
-  you-should-use
+  zsh-you-should-use
   autoupdate
 )
 
@@ -87,7 +87,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 alias cls='clear'
-alias up='sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && bun upgrade && omz update'
+alias up='sudo apt update && sudo apt upgrade -y && bun upgrade && omz update'
+# alias up='sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && bun upgrade && omz update'
 
 # Bun init
 export BUN_HOME="$HOME/.bun"
