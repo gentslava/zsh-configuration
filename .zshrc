@@ -52,6 +52,10 @@ VSCODE=code
 # value of YSU_MESSAGE_POSITION.
 export YSU_MESSAGE_POSITION="after"
 
+# Plugin autoupdate
+# Values accepted (min: 1, max: 16)
+ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS=8
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -87,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 alias cls='clear'
-alias up='sudo apt update && sudo apt upgrade -y && bun upgrade && omz update'
+alias up='sudo apt update && sudo apt upgrade -y && bun upgrade && upgrade_oh_my_zsh_all'
 # alias up='sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && bun upgrade && omz update'
 
 # Bun init
