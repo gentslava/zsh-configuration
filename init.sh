@@ -1,4 +1,6 @@
-apt get update && apt install zsh -y
+if ! type "zsh" > /dev/null; then
+  sudo apt update && sudo apt install zsh -y
+fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp .zshrc ~
 cd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/
