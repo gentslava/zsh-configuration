@@ -5,8 +5,11 @@ zmodload zsh/zprof
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Brew init
-export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
-export PATH="$BREW_HOME:$PATH"
+# export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
+# export PATH="$BREW_HOME:$PATH"
+
+# PHPs init
+export PATH="/usr/local/bin/phps:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -168,4 +171,5 @@ export PATH="$BUN_HOME/bin:$PATH"
 
 # bun completions
 [ -s "/home/gentslava/.bun/_bun" ] && source "/home/gentslava/.bun/_bun"
-export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
+
+# export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
