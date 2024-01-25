@@ -96,6 +96,7 @@ alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 alias cls='clear'
 alias up='sudo apt update && sudo apt upgrade -y && bun upgrade && upgrade_oh_my_zsh_all'
 # alias up='sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && bun upgrade && omz update'
+alias clean='sudo apt autoremove -y && sudo apt autoclean'
 
 # Bun init
 export BUN_HOME="$HOME/.bun"
@@ -173,3 +174,10 @@ export PATH="$BUN_HOME/bin:$PATH"
 [ -s "/home/gentslava/.bun/_bun" ] && source "/home/gentslava/.bun/_bun"
 
 # export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/gentslava/yandex-cloud/path.bash.inc' ]; then source '/home/gentslava/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/gentslava/yandex-cloud/completion.zsh.inc' ]; then source '/home/gentslava/yandex-cloud/completion.zsh.inc'; fi
+
