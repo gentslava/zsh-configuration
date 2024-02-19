@@ -4,13 +4,6 @@ zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Brew init
-# export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
-# export PATH="$BREW_HOME:$PATH"
-
-# PHPs init
-export PATH="/usr/local/bin/phps:$PATH"
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -66,8 +59,6 @@ ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS=8
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-#  man
-#  nvm
   docker
   zsh-tab-title
   history
@@ -95,14 +86,8 @@ source $ZSH/oh-my-zsh.sh
 alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 alias cls='clear'
 alias up='sudo apt update && sudo apt upgrade -y && bun upgrade && upgrade_oh_my_zsh_all'
-# alias up='sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && bun upgrade && omz update'
 alias clean='sudo apt autoremove -y && sudo apt autoclean'
-
-# Bun init
-export BUN_HOME="$HOME/.bun"
-export PATH="$BUN_HOME/bin:$PATH"
-[ -s "$BUN_HOME/_bun" ] && source "$BUN_HOME/_bun"
-
+alias phps='sudo update-alternatives --config php'
 
 # User configuration
 
@@ -169,15 +154,3 @@ export PATH="$BUN_HOME/bin:$PATH"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# bun completions
-[ -s "/home/gentslava/.bun/_bun" ] && source "/home/gentslava/.bun/_bun"
-
-# export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
-
-# The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/home/gentslava/yandex-cloud/path.bash.inc' ]; then source '/home/gentslava/yandex-cloud/path.bash.inc'; fi
-
-# The next line enables shell command completion for yc.
-if [ -f '/home/gentslava/yandex-cloud/completion.zsh.inc' ]; then source '/home/gentslava/yandex-cloud/completion.zsh.inc'; fi
-
