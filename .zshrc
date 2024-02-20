@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 alias cls='clear'
-alias up='sudo apt update && sudo apt upgrade -y && bun upgrade && upgrade_oh_my_zsh_all'
+alias up='sudo apt update && sudo apt upgrade -y && upgrade_oh_my_zsh_all'
 alias clean='sudo apt autoremove -y && sudo apt autoclean'
 alias phps='sudo update-alternatives --config php'
 
