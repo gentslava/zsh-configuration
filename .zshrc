@@ -1,3 +1,6 @@
+# Disabling zsh nomatch
+unsetopt nomatch
+
 # Use the command zprof to show loading metrics on Zsh startup
 zmodload zsh/zprof
 
