@@ -86,6 +86,8 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 alias cls='clear'
 alias up='sudo apt update && sudo apt upgrade -y && upgrade_oh_my_zsh_all'
