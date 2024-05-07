@@ -5,7 +5,7 @@ unsetopt nomatch
 zmodload zsh/zprof
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -73,7 +73,7 @@ plugins=(
   zsh-nvm
   zsh-better-npm-completion
   zsh-you-should-use
-  autoupdate
+#  autoupdate
 )
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
@@ -90,7 +90,7 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 alias cls='clear'
-alias up='sudo apt update && sudo apt upgrade -y && upgrade_oh_my_zsh_all'
+alias up='sudo apt update && sudo apt upgrade -y && omz update'
 alias clean='sudo apt autoremove -y && sudo apt autoclean'
 alias phps='sudo update-alternatives --config php'
 
@@ -159,3 +159,16 @@ alias phps='sudo update-alternatives --config php'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/gentslava/yandex-cloud/path.bash.inc' ]; then source '/home/gentslava/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/gentslava/yandex-cloud/completion.zsh.inc' ]; then source '/home/gentslava/yandex-cloud/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/home/gentslava/.bun/_bun" ] && source "/home/gentslava/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
